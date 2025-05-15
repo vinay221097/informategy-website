@@ -23,7 +23,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
-    font-family: 'Montserrat';
+   
+}
+
+.text-justify{
+    text-align: justify;
 }
 
 a {
@@ -72,7 +76,6 @@ a:hover {
 
 /*** Buttons ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
     font-weight: 600;
     transition: .5s;
     border-radius: 3px;
@@ -105,7 +108,6 @@ a:hover {
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
-    font-family: 'Nunito', sans-serif;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 600;
@@ -144,7 +146,7 @@ a:hover {
         position: absolute;
         width: 100%;
         top: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        
         z-index: 999;
     }
 
@@ -547,4 +549,16 @@ a:hover {
 
 .fa{
     font-size: xx-large;
+}
+
+.navbar-nav .nav-link.active {
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+
+
+.navbar-nav .nav-link.active::before {
+  content: none !important;
 }
