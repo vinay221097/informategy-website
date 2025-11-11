@@ -142,7 +142,7 @@ const interval = setInterval(() => {
   } else {
     clearInterval(interval);
   }
-}, direction === 'down' ? 80 : 40); // faster on reverse
+}, direction === 'down' ? 120 : 40); // faster on reverse
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -166,57 +166,68 @@ observer.observe(document.querySelector('.animated-statement'));
 
 
 
+async function fetchMediumPosts() {
+  const rssUrl = 'https://medium.com/feed/informategy';
+  const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
 
-  async function fetchMediumPosts() {
-    const rssUrl = 'https://medium.com/feed/informategy';
-    const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(rssUrl);
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
 
-    try {
-      const response = await fetch(proxyUrl);
-      const data = await response.json();
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-      const items = xmlDoc.querySelectorAll("item");
-      const postsContainer = document.getElementById('medium-posts');
-
-      items.forEach((item, index) => {
-        if (index >= 3) return; // Limit to 3 posts
-
-        const title = item.querySelector("title").textContent;
-        const link = item.querySelector("link").textContent;
-        const pubDate = new Date(item.querySelector("pubDate").textContent).toLocaleDateString();
-        const description = item.querySelector("description").textContent;
-
-        // Extract image from description if available
-        const imgMatch = description.match(/<img[^>]+src="([^">]+)"/);
-        const imgSrc = imgMatch ? imgMatch[1] : 'default-image.jpg'; // Fallback image
-
-        const col = document.createElement('div');
-        col.className = 'col-lg-4 wow slideInUp';
-        col.setAttribute('data-wow-delay', `${0.3 + index * 0.3}s`);
-        col.innerHTML = `
-          <div class="blog-item bg-light rounded overflow-hidden">
-            <div class="blog-img position-relative overflow-hidden">
-              <img class="img-fluid" src="${imgSrc}" alt="">
-              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="#">Blog</a>
-            </div>
-            <div class="p-4">
-              <div class="d-flex mb-3">
-                <small class="me-3 text-black"><i class="far fa-user text-primary me-2"></i>Informategy</small>
-                <small class="text-black"><i class="far fa-calendar-alt text-primary me-2"></i>${pubDate}</small>
-              </div>
-              <h4 class="mb-3 text-black">${title}</h4>
-              <p class="text-black">${description.replace(/<[^>]+>/g, '').substring(0, 100)}...</p>
-              <a class="text-uppercase" href="${link}" target="_blank">Read More <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        `;
-        postsContainer.appendChild(col);
-      });
-    } catch (error) {
-      console.error('Error fetching Medium posts:', error);
+    if (!data.items) {
+      console.error('No articles found');
+      return;
     }
+
+    const postsContainer = document.getElementById('medium-posts');
+    postsContainer.innerHTML = ''; // Clear existing posts
+
+    data.items.slice(0, 3).forEach((article, index) => {
+      const title = article.title;
+      const link = article.link;
+      const pubDate = new Date(article.pubDate).toLocaleDateString();
+      const description = article.description;
+
+      // Extract img src from description if article.thumbnail is empty
+      let thumbnail = article.thumbnail;
+      if (!thumbnail) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = description;
+        const img = tempDiv.querySelector('img');
+        thumbnail = img ? img.src : 'default-image.jpg'; // fallback
+      }
+
+      // Create post HTML
+      const col = document.createElement('div');
+      col.className = 'col-lg-4 col-md-4 mb-3';
+      col.style.animationDelay = `${0.3 + index * 0.3}s`;
+
+      col.innerHTML = `
+        <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="blog-img position-relative overflow-hidden">
+            <img class="img-fluid" src="${thumbnail}" alt="Post image">
+            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="#">Blog</a>
+          </div>
+          <div class="p-4">
+            <div class="d-flex mb-3">
+              <small class="me-3 text-black"><i class="far fa-user text-primary me-2"></i>Informategy</small>
+              <small class="text-black"><i class="far fa-calendar-alt text-primary me-2"></i>${pubDate}</small>
+            </div>
+            <h4 class="mb-3 text-black">${title}</h4>
+            <p class="text-black">${description.replace(/<[^>]+>/g, '').substring(0, 100)}...</p>
+            <a class="text-uppercase" href="${link}" target="_blank" rel="noopener noreferrer">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      `;
+
+      postsContainer.appendChild(col);
+    });
+  } catch (error) {
+    console.error('Error fetching Medium posts:', error);
   }
+}
+
+
 
   document.addEventListener('DOMContentLoaded', fetchMediumPosts);
 

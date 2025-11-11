@@ -1,6 +1,6 @@
 /********** Black & White Responsive Theme CSS **********/
 :root {
-    --primary: #000000;
+    --primary: #6056ff;
     --secondary: #444444;
     --light: #FFFFFF;
     --dark: #000000;
@@ -8,9 +8,9 @@
 
 /*** Base Styles ***/
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-family: Inter, sans-serif;
+    background-color: #f9f9f9;
+    color: #868197;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -21,11 +21,17 @@ body {
     color: black;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-   
+
+.video-zoom {
+  transform: scale(1.2); /* adjust 1.05 - 1.20 depending look */
+  transform-origin: center bottom; /* keeps it balanced */
+  filter: brightness(1.05); /* optional: enhances visual pop */
 }
 
+
+h1{
+    letter-spacing: -2px;
+}
 .text-justify{
     text-align: justify;
 }
@@ -76,7 +82,7 @@ a:hover {
 
 /*** Buttons ***/
 .btn {
-    font-weight: 600;
+    
     transition: .5s;
     border-radius: 3px;
     padding: 12px 30px;
@@ -91,7 +97,7 @@ a:hover {
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    background-color: transparent;
+    background-color: white;
     color: var(--primary);
 }
 
@@ -108,7 +114,7 @@ a:hover {
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
-    color: #FFFFFF;
+    color: #000000;
     font-size: 18px;
     font-weight: 600;
     transition: .5s;
@@ -134,20 +140,42 @@ a:hover {
     .navbar-dark .navbar-nav .nav-link {
         color: var(--dark);
         padding: 10px 0;
+        background-color: white;
     }
 
     .navbar-dark .navbar-brand h1 {
         color: var(--primary);
     }
+    .navbar-dark{
+        border-radius: 16px;
+        max-height: 80svh;
+        position: relative;
+        overflow-y: scroll;
+    }
 }
 
 @media (min-width: 992px) {
     .navbar-dark {
-        position: absolute;
-        width: 100%;
+       position: absolute;
+        width: 98%;
         top: 0;
-        
         z-index: 999;
+        margin: 10px;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        background-color: var(--white);
+        border: 0 solid #0000;
+        border-radius: 24px;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr auto;
+        grid-auto-columns: 1fr;
+        justify-content: space-between;
+        align-items: center;
+        
+        height: auto;
+        min-height: 4.5rem;
+        display: flex;
+        box-shadow: 0 0 1px #16134a80, 0 -2px #16134a14, 0 2px 2px #16134a14, 0 9px 13px #0d162f1a;
     }
 
     .sticky-top.navbar-dark {
@@ -179,7 +207,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
@@ -204,15 +232,7 @@ a:hover {
     margin: auto;
 }
 
-.section-title::after {
-    content: "";
-    width: 6px;
-    height: 5px;
-    background: #FFFFFF;
-    animation: section-title-run 5s infinite linear;
-    display: block;
-    margin: auto;
-}
+
 
 /*** Service ***/
 .service-item {
@@ -421,8 +441,8 @@ a:hover {
     border-color: transparent;
 }
 
-.footer-section a:hover {
-  color: #ffffff !important;
+.text-white-50{
+    color: black !important;
 }
 
 .contact-section form input,
@@ -462,6 +482,7 @@ a:hover {
     bottom: 19px;
     right: 6px;
     z-index: 9999;
+    width: 12%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -488,7 +509,7 @@ a:hover {
 /* Video Container */
 #avatar-container {
     display: none;
-    width: 23%;
+    width: 100%;
     max-width: 87vw;
     border-radius: 12px;
     overflow: hidden;
@@ -561,4 +582,273 @@ a:hover {
 
 .navbar-nav .nav-link.active::before {
   content: none !important;
+}
+
+
+#medium-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#medium-posts .col-lg-4 {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+#medium-posts .col-lg-4:hover {
+  transform: translateY(-10px);
+}
+
+.blog-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-img:hover img {
+  transform: scale(1.05);
+}
+
+.blog-img a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
+
+.p-4 {
+  padding: 16px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-item .d-flex {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+
+.blog-item h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.blog-item p {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.blog-item a.text-uppercase {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.blog-item a.text-uppercase:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media(max-width: 992px) {
+  #medium-posts .col-lg-4 {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media(max-width: 576px) {
+  #medium-posts .col-lg-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile-specific styles for videos and navigation */
+@media (max-width: 767.98px) {
+  /* Navbar adjustments */
+  .navbar-dark .navbar-nav {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+  }
+
+  .container-fluid{
+    background-color: white;
+  }
+
+  .navbar-dark{
+    background-color: white;
+    z-index: 999;
+        
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        
+        border: 0 solid #0000;
+        border-radius: 24px;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr auto;
+        grid-auto-columns: 1fr;
+        justify-content: space-between;
+        align-items: center;
+        
+        height: auto;
+        min-height: 4.5rem;
+        display: flex;
+        box-shadow: 0 0 1px #16134a80, 0 -2px #16134a14, 0 2px 2px #16134a14, 0 9px 13px #0d162f1a;
+  }
+
+  .navbar-dark a{
+    width: 50%;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: var(--dark);
+    font-size: 16px;
+    margin-left: 0;
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  /* Carousel full height is costly on small devices, reduce height */
+  #header-carousel .carousel-item {
+    height: auto !important;
+    min-height: 300px;
+    position: relative;
+  }
+
+  /* Video responsiveness: make videos smaller and side-by-side stacking */
+  #header-carousel video.position-absolute {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    z-index: 1 !important;
+  }
+
+  /* Adjust the carousel caption */
+  .carousel-caption {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 15px !important;
+    height: auto !important;
+    bottom: auto !important;
+    top: 10% !important;
+    text-align: center !important;
+    background: rgba(255,255,255,0.9);
+    color: #111;
+    border-radius: 10px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .carousel-caption h2.lead {
+    font-size: 1rem !important;
+  }
+
+  /* Button inside caption */
+  .carousel-caption a.btn {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 10px 15px !important;
+    font-size: 1rem !important;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  /* Make the carousel item position relative (not fullscreen) */
+  #header-carousel .carousel-item {
+    height: auto !important;
+    min-height: 300px;
+    padding: 10px 15px;
+  }
+
+  /* Container for videos to align vertically */
+  #header-carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Style for videos inside the carousel */
+  #header-carousel video.position-absolute {
+    position: relative !important;
+    width: 90% !important;
+    max-width: 400px;
+    height: auto !important;
+    margin: 10px 0 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    z-index: 1 !important;
+  }
+
+  /* Optional: Hide the right side video to reduce clutter */
+  #header-carousel video.position-absolute:nth-of-type(2) {
+    display: none;
+  }
+
+  /* Carousel caption tweaks */
+  .carousel-caption {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 15px;
+    background: rgba(255,255,255,0.95);
+    color: #111;
+    border-radius: 12px;
+    position: relative !important;
+    bottom: auto !important;
+    top: 10% !important;
+    text-align: center;
+    z-index: 2 !important;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .carousel-caption h2.lead {
+    font-size: 1rem !important;
+  }
+
+  .carousel-caption a.btn {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+  }
+
+  .navbar-dark img{
+    width: 100% !important;
+  }
 }

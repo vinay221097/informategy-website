@@ -65,33 +65,35 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
             <!-- Fullscreen Video Slide -->
-            <div class="carousel-item active position-relative" style="height: 100vh;">
+            <div class="carousel-item active position-relative" style="height: 100vh;background-color: white;">
               <!-- Fullscreen Video -->
-              <video autoplay muted loop playsinline
-                class="position-absolute w-100 h-100 top-0 start-0"
-                style="object-fit: cover; z-index: 1;">
-                <source src="img/hero2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+              
+             <video autoplay muted loop playsinline
+                class="position-absolute h-100 top-0 start-0 video-zoom"
+                style="z-index: 2;padding-left: 2%; width: 19%;">
+                <source src="img/leftside.mp4" type="video/mp4">
               </video>
+
 
               <!-- Overlay Caption Content -->
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-white text-center"
-                   style="z-index: 2; height: 100vh;">
-                <div class="p-4" style="max-width: 900px;">
-                  <h1 class="text-white display-4 fw-bold mb-3 animated fadeInDown">Meet Your New AI Workforce</h1>
-                  <h2 class="lead mb-4 animated fadeInUp text-white">
-                    AI Agents that think, talk, and act — to drive results around the clock.
+                   style="z-index: 2; height: 100vh;width: 60%;margin-left:20%">
+                <div class="p-4" style="height: 100%;">
+                  <h1 class="text-dark display-4 fw-bold mb-3  animated fadeInDown">Business Has Grown. Your Workload Shouldn’t.</h1>
+                  <h2 class="lead mb-4 animated fadeInUp text-dark fs-6">
+                    Deploy an AI Agent to automate routine work. Cut costs by 40-60%.<br> Reclaim thousands of hours and focus your team on growth.
+
                   </h2>
-                  <ul class="list-unstyled mb-4">
-                    <li class="mb-2"> Real conversations, real actions — no training required.</li>
-                    <li class="mb-2">Eliminate repetitive tasks. Speed up every process.</li>
-                    <li class="mb-2">Plug into your tools. Scale your business. Stay lean.</li>
-                    <br><br>
-                    <li class="mb-2">Ready to deploy your AI team?</li>
-                  </ul>
-                  <a href="https://calendly.com/informategy" class="btn btn-primary btn-lg rounded-pill px-5 animated fadeIn">Get a Free Demo</a>
+                  <a href="https://calendly.com/informategy" class="btn btn-primary btn-lg rounded-pill px-5 animated fadeIn" style="max-width: 300px;margin-left: 30%;text-decoration: None;">Get a Free Demo</a>
                 </div>
               </div>
+
+              <video autoplay muted loop playsinline
+                class="position-absolute  h-100 top-0 start-0"
+                style=" z-index: 2;    margin-left: 80%;width: 19%;">
+                <source src="img/rightside.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
@@ -107,12 +109,15 @@
     <section class="animated-statement-section">
       <div class="container">
         <h2 class="animated-statement text-white">
-          <span>We</span> <span>create</span> <span>AI</span> <span>agents</span> <span>that</span> <span>think,</span> <span>talk,</span> <span>and</span> <span>act.</span> 
-          <span>Turn</span> <span>conversations</span> <span>into</span> <span>customers,</span> <span>automate</span> <span>tasks,</span> 
-          <span>book</span> <span>meetings,</span> <span>and</span> <span>run</span> <span>workflows,</span> <span>all</span> <span>day,</span> <span>every</span> <span>day.</span>
+    <span>We</span> <span>build</span> <span>AI</span> <span>Agents</span> <span>that</span> <span>don’t</span> <span>just</span> <span>talk</span> <span>—</span> <span>they</span> <span>do.</span><br>
 
-          <span>Scale</span> <span>your</span> <span>business</span> <span>effortlessly,</span> <span>stay</span> <span>lean,</span> <span>and</span> <span>keep</span> <span>growing</span> <span>—</span> 
-          <span>without</span> <span>the</span> <span>overhead.</span>
+    <span>They</span> <span>run</span> <span>workflows,</span> <span>trigger</span> <span>pipelines,</span> <span>update</span> <span>systems,</span> <span>and</span> <span>follow</span> <span>through</span> <span>autonomously.</span>
+
+    <span>Your</span> <span>operations</span> <span>move</span> <span>faster,</span> <span>your</span> <span>team</span> <span>stays</span> <span>focused,</span> <span>and</span> <span>growth</span> <span>stops</span> <span>being</span> <span>a</span> <span>grind.</span>
+
+
+
+
 
         </h2>
       </div>
@@ -224,11 +229,11 @@
 
 
     <!-- Features Start -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="about">
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="about" style="background-color: black;">
   <div class="container py-5">
     <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 700px;">
       <h5 class="fw-bold text-white text-uppercase">Why Choose Us?</h5>
-      <h1 class="mb-0">Because Our Clients Don’t Just Grow — They Scale, Lead, and Win</h1>
+      <h1 class="mb-0 text-white">Because Our Clients Don’t Just Grow — They Scale, Lead, and Win</h1>
     </div>
     <div class="row g-5">
       <!-- LEFT -->
@@ -238,15 +243,21 @@
             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
               <i class="fa fa-rocket text-white"></i>
             </div>
-            <h4>From MVPs to Funded Startups</h4>
-            <p class="mb-0">We design AI systems that help founders move fast — from first launch to major funding rounds. Whether you're scaling, exiting, or expanding, we build the AI backbone for your next leap.</p>
+            <h4 class="text-white">From Startup to Scale, Without the Drag</h4>
+            <p class="mb-0 text-white">
+              We build AI Agents that <strong>run your operations</strong>, not just chat.
+              Workflows move, pipelines execute, data syncs, and decisions happen — <em>automatically</em>.
+              Your company grows <strong>without the overhead.</strong>
+            </p>
           </div>
           <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
               <i class="fa fa-handshake text-white"></i>
             </div>
-            <h4>Relationships That Last</h4>
-            <p class="mb-0">Our clients stay for years — not because they have to, but because we keep delivering clarity, speed, and results that grow with them.</p>
+            <h4 class="text-white">Execution-Level Automation, Not Support Bots</h4>
+              <p class="mb-0 text-white">Your AI Agent <strong>books, routes, escalates, reconciles, updates, closes loops, and reports.</strong>
+              It <em>finishes work</em> — end to end.
+              Not “assist.” <strong>Execute.</strong></p>
           </div>
         </div>
       </div>
@@ -254,7 +265,7 @@
       <!-- CENTER -->
       <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
         <div class="position-relative h-100">
-          <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.jpg" style="object-fit: cover;">
+          <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.png" style="object-fit: cover;">
         </div>
       </div>
 
@@ -265,15 +276,20 @@
             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
               <i class="fa fa-user-check text-white"></i>
             </div>
-            <h4> Custom-Built, Never Cookie-Cutter.</h4>
-            <p class="mb-0">No templates. No shortcuts. Every AI agent we build is handcrafted to fit your workflows, your data, and your exact market advantage.</p>
+            <h4 class="text-white">Custom-Built for Your Business. Not Templates.</h4>
+            <p class="mb-0 text-white">No generic flows. No “plug-and-pray” automation.
+              We architect your AI Agent around your <strong>exact processes, systems, and KPIs.</strong>
+              It performs because it’s built for <em>your reality</em> — not someone else’s.
+            </p>
           </div>
           <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
               <i class="fa fa-headset text-white"></i>
             </div>
-            <h4>Founder-Led, Outcome-Obsessed</h4>
-            <p class="mb-0">You’ll work directly with builders — not sales reps. We listen deeply, build smarter, and stay relentless about one thing: your success.</p>
+            <h4 class="text-white">Founder-Led. ROI or Nothing.</h4>
+            <p class="mb-0 text-white">You work directly with the builders — not sales reps or layers of management.
+            We design for <strong>impact</strong>, deploy fast, measure results, and continually optimize.
+            The mandate is simple: <strong>cost down, output up, growth unlocked.</strong></p>
           </div>
         </div>
       </div>
@@ -423,7 +439,7 @@
   <div class="container py-5">
     <div class="row justify-content-center text-center">
       <div class="col-lg-8">
-        <h2 class="fw-bold mb-4">Let’s Build Your AI Together</h2>
+        <h2 class="fw-bold mb-4 text-white">Let’s Build Your AI Together</h2>
         <p class="fs-5 mb-4">
           Whether you're validating an idea or scaling operations, we’ll design intelligent systems that move you forward—fast.
         </p>
@@ -473,7 +489,7 @@
     <div class="row gy-4">
       <div class="col-md-4">
         <h5 class="fw-bold mb-3">Informategy</h5>
-        <p>We build AI agents that help businesses scale operations, cut costs, and serve better—without growing headcount.</p>
+        <p class="text-white-50">We build AI agents that help businesses scale operations, cut costs, and serve better—without growing headcount.</p>
       </div>
 
       <div class="col-md-2">
@@ -488,9 +504,9 @@
 
       <div class="col-md-3">
         <h6 class="fw-semibold text-uppercase mb-3">Contact</h6>
-        <p class="mb-1"><i class="fa fa-envelope me-2 text-primary"></i>vinay@informategy.com</p>
-        <p class="mb-1"><i class="fa fa-phone me-2 text-primary"></i>+91 9640221097</p>
-        <p><i class="fa fa-globe me-2 text-primary"></i>www.informategy.com</p>
+        <p class="mb-1 text-white-50"><i class="fa fa-envelope me-2"></i>vinay@informategy.com</p>
+        <p class="mb-1 text-white-50"><i class="fa fa-phone me-2 "></i>+91 9640221097</p>
+        <p class="mb-1 text-white-50"><i class="fa fa-globe me-2"></i>www.informategy.com</p>
       </div>
 
       <div class="col-md-3">
