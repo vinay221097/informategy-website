@@ -29,9 +29,7 @@ body {
 }
 
 
-h1{
-    letter-spacing: -2px;
-}
+
 .text-justify{
     text-align: justify;
 }
@@ -177,6 +175,10 @@ a:hover {
         display: flex;
         box-shadow: 0 0 1px #16134a80, 0 -2px #16134a14, 0 2px 2px #16134a14, 0 9px 13px #0d162f1a;
     }
+
+    h1{
+    letter-spacing: -2px;
+}
 
     .sticky-top.navbar-dark {
         background: #000000;
@@ -695,9 +697,6 @@ a:hover {
     border-radius: 12px;
   }
 
-  .container-fluid{
-    background-color: white;
-  }
 
   .navbar-dark{
     background-color: white;
