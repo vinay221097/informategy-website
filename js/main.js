@@ -257,3 +257,45 @@ async function fetchMediumPosts() {
       hasAutoOpened = true;
     }
   });
+
+
+
+  document.querySelectorAll('.reveal-card').forEach(card => {
+    const title = card.querySelector('h4');
+    const text = card.querySelector('.reveal-text');
+
+    gsap.set(text, { y: 10 });
+
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, {
+        backgroundPosition: '100% 100%',
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+
+      gsap.to(title, {
+        y: -6,
+        duration: 0.3,
+        ease: 'power2.out'
+      });
+
+      gsap.to(text, {
+        opacity: 1,
+        y: 0,
+        duration: 0.3,
+        ease: 'power2.out'
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      gsap.to(title, { y: 0, duration: 0.3 });
+      gsap.to(text, { opacity: 0, y: 10, duration: 0.3 });
+    });
+  });
+
+
+document.querySelectorAll('.brand-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('is-open');
+  });
+});

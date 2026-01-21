@@ -52,12 +52,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="https://informategy.com" class="nav-item nav-link">Home</a>
-                    <a href="#services" class="nav-item nav-link">Services</a>
-                    <a href="#blog" class="nav-item nav-link">Blog</a>
-                    <a href="#about" class="nav-item nav-link">About</a>
-                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/case-studies.html" class="nav-item nav-link active">Case Studies</a>
+                    <a href="/blog.html" class="nav-item nav-link">Blog</a>
+                    <a href="/about.html" class="nav-item nav-link">About</a>
+                    <a href="https://calendly.com/informategy" class="nav-item nav-link">Contact</a>
                 </div>
+
 
             </div>
         </nav>
@@ -128,107 +129,412 @@
 
     <!-- Services Start -->
     <section class="ai-services-section py-5 bg-white" id="services">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Left Side: Label -->
-          <div class="col-md-4 d-flex align-items-center justify-content-center text-center">
-            <h2 class="section-label text-black mb-0">
-              OUR<br>SERVICES
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Side: Label -->
+      <div class="col-md-4 d-flex align-items-center justify-content-center text-center">
+        <h2 class="section-label text-black mb-0">
+          OUR<br>SERVICES
+        </h2>
+      </div>
+
+      <!-- Right Side: Expandable List -->
+      <div class="col-md-8">
+        <div class="accordion" id="servicesAccordion">
+
+          <!-- Service 1 -->
+          <div class="accordion-item border-0 border-bottom mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service1">
+                AI Agent Design & Deployment
+              </button>
             </h2>
-          </div>
-
-          <!-- Right Side: Expandable List -->
-          <div class="col-md-8">
-            <div class="accordion" id="servicesAccordion">
-
-              <div class="accordion-item border-0 border-bottom mb-3">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#service1">
-                    AI Chat Assistants
-                  </button>
-                </h2>
-                <div id="service1" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                  <div class="accordion-body">
-                    Deploy AI chatbots that engage visitors, answer FAQs, qualify leads, and book appointments—instantly and 24/7.
-                  </div>
-                </div>
+            <div id="service1"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                We design and deploy AI agents tailored to your business workflows.
+                These agents observe inputs, make decisions, and perform actions
+                across systems — reliably and at scale.
               </div>
-
-              <div class="accordion-item border-0 border-bottom mb-3">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#service2">
-                    Voice AI for Call Handling
-                  </button>
-                </h2>
-                <div id="service2" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                  <div class="accordion-body">
-                    Handle inbound and outbound calls with lifelike AI voice agents that talk like humans, but never sleep.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item border-0 border-bottom mb-3">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#service3">
-                    Automated Lead Qualification
-                  </button>
-                </h2>
-                <div id="service3" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                  <div class="accordion-body">
-                    Instantly qualify leads from chat, voice, or form entries using smart workflows that gather and score intent.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item border-0 border-bottom mb-3">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#service4">
-                    AI-Powered Scheduling
-                  </button>
-                </h2>
-                <div id="service4" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                  <div class="accordion-body">
-                    Integrate AI agents with your calendar to auto-book meetings based on preferences, availability, and context.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item border-0 border-bottom mb-3">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#service5">
-                    Workflow Automation
-                  </button>
-                </h2>
-                <div id="service5" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                  <div class="accordion-body">
-                    Connect data, trigger actions, and build hands-free operations with AI agents orchestrating internal tasks.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item border-0">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#service6">
-                    Data-Driven Customer Support
-                  </button>
-                </h2>
-                <div id="service6" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                  <div class="accordion-body">
-                    Deliver accurate, fast, and always-on support using LLM-powered agents trained on your business data and FAQs.
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
+
+          <!-- Service 2 -->
+          <div class="accordion-item border-0 border-bottom mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service2">
+                Business Process Automation
+              </button>
+            </h2>
+            <div id="service2"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                We automate repetitive, high-effort business processes
+                across operations, finance, sales, and support —
+                reducing manual work while improving consistency and speed.
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="accordion-item border-0 border-bottom mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service3">
+                Data & Document Intelligence
+              </button>
+            </h2>
+            <div id="service3"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                We build AI systems that understand your data —
+                including documents, spreadsheets, reports, and databases —
+                and transform it into structured, usable intelligence.
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="accordion-item border-0 border-bottom mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service4">
+                AI-Powered Decision Support
+              </button>
+            </h2>
+            <div id="service4"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                We enable teams to ask questions, explore scenarios,
+                and act on insights using AI — without relying
+                on complex dashboards or technical intermediaries.
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="accordion-item border-0 border-bottom mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service5">
+                System Integration & Orchestration
+              </button>
+            </h2>
+            <div id="service5"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                We connect AI agents with your existing tools —
+                CRMs, ERPs, internal systems, and APIs —
+                ensuring automation works within your real environment.
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service6">
+                AI Operations & Long-Term Support
+              </button>
+            </h2>
+            <div id="service6"
+                 class="accordion-collapse collapse"
+                 data-bs-parent="#servicesAccordion">
+              <div class="accordion-body">
+                We support AI systems after deployment —
+                monitoring performance, improving accuracy,
+                expanding capabilities, and ensuring reliability over time.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
+
     <!-- About End -->
 
 
+    <!-- Who we work with start -->
+<section class="container-fluid py-5 bg-black">
+  <div class="container py-4">
 
-    <!-- Features Start -->
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h5 class="text-uppercase fw-bold text-white">Who We Work With</h5>
+      <h2 class="fw-bold text-white">
+        AI Execution for Teams at Every Stage
+      </h2>
+      <p class="mt-3 text-muted" style="max-width: 760px; margin:auto;">
+        Different growth stages demand different systems.  
+        We design AI that fits your reality — and scales with you.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- STARTUPS -->
+      <div class="col-md-6 col-lg-3">
+        <div class="brand-card">
+          <div class="card-content">
+
+            <!-- FRONT -->
+            <div class="card-front">
+              <div class="card-icon">
+                <i class="fa fa-rocket"></i>
+              </div>
+              <h4>Startups</h4>
+              <p class="front-subtext">
+                Build fast without operational debt
+              </p>
+              <p class="front-desc">
+                Early automation that lets founders focus on product and traction.
+              </p>
+            </div>
+
+            <!-- HOVER -->
+            <div class="card-hover">
+              <h5>What we deliver</h5>
+              <ul>
+                <li>AI lead qualification & routing</li>
+                <li>Automated scheduling & follow-ups</li>
+                <li>Zero early headcount bloat</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SCALE-UPS -->
+      <div class="col-md-6 col-lg-3">
+        <div class="brand-card">
+          <div class="card-content">
+
+            <div class="card-front">
+              <div class="card-icon">
+                <i class="fa fa-chart-line"></i>
+              </div>
+              <h4>Scale-ups</h4>
+              <p class="front-subtext">
+                Remove friction as complexity grows
+              </p>
+              <p class="front-desc">
+                Systems that scale across teams, tools, and workflows.
+              </p>
+            </div>
+
+            <div class="card-hover">
+              <h5>What we deliver</h5>
+              <ul>
+                <li>Workflow & ops automation</li>
+                <li>Cross-system orchestration</li>
+                <li>AI replacing manual operations</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="col-md-6 col-lg-3">
+        <div class="brand-card">
+          <div class="card-content">
+
+            <div class="card-front">
+              <div class="card-icon">
+                <i class="fa fa-building"></i>
+              </div>
+              <h4>Enterprises</h4>
+              <p class="front-subtext">
+                AI inside production workflows
+              </p>
+              <p class="front-desc">
+                Secure, compliant AI embedded into real systems.
+              </p>
+            </div>
+
+            <div class="card-hover">
+              <h5>What we deliver</h5>
+              <ul>
+                <li>Compliance-safe AI automation</li>
+                <li>Legacy system integration</li>
+                <li>Production-grade reliability</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- AGENCIES -->
+      <div class="col-md-6 col-lg-3">
+        <div class="brand-card">
+          <div class="card-content">
+
+            <div class="card-front">
+              <div class="card-icon">
+                <i class="fa fa-handshake"></i>
+              </div>
+              <h4>Agencies & Consultancies</h4>
+              <p class="front-subtext">
+                White-label AI execution
+              </p>
+              <p class="front-desc">
+                Extend delivery without increasing internal overhead.
+              </p>
+            </div>
+
+            <div class="card-hover">
+              <h5>What we deliver</h5>
+              <ul>
+                <li>Deep AI & automation expertise</li>
+                <li>Execution bandwidth on demand</li>
+                <li>Client-ready delivery support</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Who we work with end -->
+
+
+    <!-- How You Can Work With Us start -->
+
+
+<section class="container-fluid py-5 bg-white">
+  <div class="container py-4">
+
+    <div class="text-center mb-5">
+      <h5 class="text-uppercase fw-bold text-black">How You Can Work With Us</h5>
+      <h2 class="fw-bold text-black">
+        Clear Engagement Models. Predictable Outcomes.
+      </h2>
+      <p class="mt-3 text-black" style="max-width:720px;margin:auto;">
+        Choose the engagement that fits your needs today —
+        and scales with you tomorrow.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- AI PROJECTS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="engagement-card">
+          <h4 class="card-title">
+            <i class="fa fa-cogs me-2"></i>AI Projects
+          </h4>
+          <p class="card-subtitle">
+            Fixed-scope builds with clear outcomes
+          </p>
+
+          <hr class="card-divider">
+
+          <ul class="card-list">
+            <li><i class="fa fa-check"></i> AI agents & workflow automation</li>
+            <li><i class="fa fa-check"></i> Defined scope & milestones</li>
+            <li><i class="fa fa-check"></i> Production-ready handover</li>
+          </ul>
+
+          <button class="card-btn">Build With Us</button>
+        </div>
+      </div>
+
+      <!-- AI STAFFING -->
+      <div class="col-md-6 col-lg-4">
+        <div class="engagement-card">
+          <h4 class="card-title">
+            <i class="fa fa-users me-2"></i>AI Staffing & Execution
+          </h4>
+          <p class="card-subtitle">
+            Embedded engineers, not recruiters
+          </p>
+
+          <hr class="card-divider">
+
+          <ul class="card-list">
+            <li><i class="fa fa-check"></i> AI & automation engineers</li>
+            <li><i class="fa fa-check"></i> Contract or project-based</li>
+            <li><i class="fa fa-check"></i> Direct access to builders</li>
+          </ul>
+
+          <button class="card-btn">Hire AI Talent</button>
+        </div>
+      </div>
+
+      <!-- AI OPS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="engagement-card">
+          <h4 class="card-title">
+            <i class="fa fa-sync-alt me-2"></i>AI Ops Partnership
+          </h4>
+          <p class="card-subtitle">
+            Continuous improvement & scaling
+          </p>
+
+          <hr class="card-divider">
+
+          <ul class="card-list">
+            <li><i class="fa fa-check"></i> Ongoing optimization & support</li>
+            <li><i class="fa fa-check"></i> New automations as needs evolve</li>
+            <li><i class="fa fa-check"></i> Long-term ROI focus</li>
+          </ul>
+
+          <button class="card-btn">Partner With Us</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- How You Can Work With Us end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Why Choose us Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="about" style="background-color: black;">
   <div class="container py-5">
     <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 700px;">
@@ -297,135 +603,303 @@
   </div>
 </div>
 
-    <!-- Features Start -->
+    <!-- Why Choose us end -->
 
 
+    <!-- metrics start -->
 
-<!-- Testimonials Start -->
-<section class="bg-white text-white py-5">
-  <div class="container">
+    <section class="container-fluid py-5 bg-white">
+  <div class="container py-4">
+
+    <!-- Header -->
     <div class="text-center mb-5">
-      <h5 class="text-uppercase text-black fw-bold">Testimonials</h5>
-      <h2 class="fw-bold text-black">What Our Clients Say About Informategy</h2>
+      <h5 class="text-uppercase fw-bold text-black">Impact in Numbers</h5>
+      <h2 class="fw-bold text-black">
+        Real Outcomes. Measurable Results.
+      </h2>
+      <p class="mt-3 text-muted" style="max-width:720px;margin:auto;">
+        We don’t sell promises. We build systems that deliver quantifiable impact.
+      </p>
     </div>
 
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
 
-      <div class="col-md-6 col-lg-4">
-        <div class="testimonial-card bg-white text-dark p-4 h-100">
-          <h5 class="fw-bold mb-1 text-black">Matteo Sartorio</h5>
-          <p class="text-muted mb-2 small">Business Developer · EU Region</p>
-          <p class="mb-0">
-            Informategy blends deep AI expertise with executional focus. Their work is strategic, practical, and consistently exceeds delivery standards.
-          </p>
+      <!-- Metric 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="metric-outer">
+          <div class="metric-dot"></div>
+          <div class="metric-card">
+            <div class="metric-ray"></div>
+            <div class="metric-value">40–60%</div>
+            <div class="metric-label">Cost Reduction</div>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="testimonial-card bg-white text-dark p-4 h-100">
-          <h5 class="fw-bold mb-1 text-black">Alessandro Venturini</h5>
-          <p class="text-muted mb-2 small">Zebra Technologies · Sales Engineer</p>
-          <p class="mb-0">
-            Informategy’s team delivered complex AI solutions under tight timelines. Reliable, proactive, and technically sharp—they’ve added major value to our execution.
-          </p>
+      <!-- Metric 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="metric-outer">
+          <div class="metric-dot"></div>
+          <div class="metric-card">
+            <div class="metric-ray"></div>
+            <div class="metric-value">10k+</div>
+            <div class="metric-label">Hours Automated</div>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="testimonial-card bg-white text-dark p-4 h-100">
-          <h5 class="fw-bold mb-1 text-black">Victor Manuel Capilla Quiros</h5>
-          <p class="text-muted mb-2 small">Founder · nuevecuatro</p>
-          <p class="mb-0">
-            Informategy made our AI chatbot project smooth, even for a non-technical founder like me. Clear communication, cost-conscious execution, and long-term results.
-          </p>
+      <!-- Metric 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="metric-outer">
+          <div class="metric-dot"></div>
+          <div class="metric-card">
+            <div class="metric-ray"></div>
+            <div class="metric-value">20+</div>
+            <div class="metric-label">AI Systems Deployed</div>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="testimonial-card bg-white text-dark p-4 h-100">
-          <h5 class="fw-bold mb-1 text-black">Massimo Dell’Erba</h5>
-          <p class="text-muted mb-2 small">Startup Consultant</p>
-          <p class="mb-0">
-            Informategy delivers fast and adapts to any project with ease. Their entrepreneurial mindset and technical flexibility make them a valuable long-term partner.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="testimonial-card bg-white text-dark p-4 h-100">
-          <h5 class="fw-bold mb-1 text-black">Federico Quarato</h5>
-          <p class="text-muted mb-2 small">CEO @ Klear · VP @ Frontiere</p>
-          <p class="mb-0">
-            Informategy is a high-caliber AI team that consistently hits quality standards. They collaborate deeply and deliver with clarity and precision.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="testimonial-card bg-white text-dark p-4 h-100">
-          <h5 class="fw-bold mb-1 text-black">Alessandro Cestaro</h5>
-          <p class="text-muted mb-2 small">CEO · Holifya</p>
-          <p class="mb-0">
-            After 3+ years of partnership, we can confidently say Informategy is exceptional. Their ability to scale systems and tailor to our needs is unmatched.
-          </p>
+      <!-- Metric 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="metric-outer">
+          <div class="metric-dot"></div>
+          <div class="metric-card">
+            <div class="metric-ray"></div>
+            <div class="metric-value">3+ yrs</div>
+            <div class="metric-label">Client Partnerships</div>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-<!-- Testimonials End -->
 
 
-<!-- Founder Vision Section -->
-    <section class="container-fluid py-5 bg-black wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          
-          <!-- Left: Image -->
-          <div class="col-lg-5">
-            <img src="img/founder.png" alt="Vinay - Founder of Informategy" class="img-fluid rounded shadow" style="max-height: 520px; object-fit: cover;">
-          </div>
 
-          <!-- Right: Text -->
-          <div class="col-lg-7">
-            <h6 class=" text-white text-uppercase fw-bold mb-3">The Founder</h6>
-            <h2 class="fw-bold mb-3 text-white">Vinay – Building AI With Purpose, Not Just Code.</h2>
-            
-            <p class="mb-3 text-white text-justify">
-              Vinay’s journey spans multiple countries, a <b>Master's in AI from Europe's top universities</b>, and years of hands-on experience solving real-world problems with data and automation. From Italy and France to Germany and India, he’s not just seen how tech evolves — he’s seen <b>how people think, work, and grow</b> in different parts of the world.
-            </p>
+    <!--  metrics end -->
 
 
-            <p class="mb-3 text-white text-justify">
-              With a decade of experience in AI, cloud, and lean product thinking, Vinay’s focus isn’t just on innovation — it’s on <b>intelligent momentum</b>. Informategy was born from the belief that smart systems should be <b>accessible, explainable, and deeply useful</b> — not black-box gimmicks.
-            </p>
 
-            <p class="mb-3 text-white text-justify">
-              He’s built AI agents that answer customer queries in real-time, schedule meetings automatically, extract insights from documents, and even negotiate via voice — but more importantly, he's built <b>trust</b> with every client Informategy serves. That’s why our clients stay for years, refer others, and grow with us.
-            </p>
+<!-- Testimonials Start -->
+<section class="bg-black py-5" id="testimonials">
+  <div class="container">
 
-            <p class="fw-semibold mb-4 text-white text-justify">
-              Vinay’s vision isn’t to sell tools — it’s to create AI collaborators that give you time back, cut the clutter, and scale what truly matters.
-            </p>
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h5 class="text-uppercase fw-bold text-white">Testimonials</h5>
+      <h2 class="fw-bold text-white">
+        Trusted by Founders, Operators, and Leaders
+      </h2>
+    </div>
 
-            <a href="https://calendly.com/informategy" class="btn btn-white rounded-pill px-4 py-2">Talk to Vinay</a>
-            <a href="https://www.linkedin.com/in/vinay-krishna-munnaluri" class="btn btn-white btn-outline-dark rounded-pill px-4 py-2 ms-3"><i class="fab fa-linkedin me-2"></i>Connect</a>
+    <div class="row g-4 justify-content-center">
+
+      <!-- 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Informategy blends deep AI expertise with executional focus.
+            Their work is strategic, practical, and consistently exceeds
+            delivery standards.”
+          </p>
+          <div class="testimonial-author">
+            <strong>Matteo Sartorio</strong>
+            <span>Business Developer · EU Region</span>
           </div>
         </div>
       </div>
-    </section>
 
-<!-- Founder Profile End -->
+      <!-- 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Informategy delivered complex AI solutions under tight timelines.
+            Reliable, proactive, and technically sharp — they added immediate
+            value to our execution.”
+          </p>
+          <div class="testimonial-author">
+            <strong>Alessandro Venturini</strong>
+            <span>Zebra Technologies · Sales Engineer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “They made our AI chatbot project smooth, even for a non-technical
+            founder. Clear communication, cost-conscious execution,
+            and long-term results.”
+          </p>
+          <div class="testimonial-author">
+            <strong>Victor Manuel Capilla Quiros</strong>
+            <span>Founder · nuevecuatro</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Informategy delivers fast and adapts to any project with ease.
+            Their entrepreneurial mindset and technical flexibility make them
+            a valuable long-term partner.”
+          </p>
+          <div class="testimonial-author">
+            <strong>Massimo Dell’Erba</strong>
+            <span>Startup Consultant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Informategy is a high-caliber AI team that consistently meets
+            quality standards. They collaborate deeply and deliver with
+            clarity and precision.”
+          </p>
+          <div class="testimonial-author">
+            <strong>Federico Quarato</strong>
+            <span>CEO @ Klear · VP @ Frontiere</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “After more than three years of collaboration, we can confidently
+            say Informategy is exceptional. Their ability to scale systems and
+            tailor solutions is unmatched.”
+          </p>
+          <div class="testimonial-author">
+            <strong>Alessandro Cestaro</strong>
+            <span>CEO · Holifya</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials End -->
+
+
+
+
+    <!-- case studies start -->
+<section class="container-fluid py-5 bg-white">
+  <div class="container py-4">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h5 class="text-uppercase fw-bold text-black">Case Studies</h5>
+      <h2 class="fw-bold text-black">
+        AI Systems Deployed in Live Operations
+      </h2>
+      <p class="mt-3 text-muted" style="max-width:720px;margin:auto;">
+        Selected examples of execution systems deployed inside real business
+        operations, delivering measurable efficiency, speed, and control.
+      </p>
+    </div>
+
+    <!-- Case Grid -->
+    <div class="case-grid">
+
+      <!-- Featured: Nutrition & Patient Data Intelligence -->
+      <div class="case-card featured">
+        <img src="img/case-nutritionist.svg" alt="Nutrition & Patient Data Intelligence">
+        <div class="overlay">
+          <span class="tag">Healthcare & Wellness</span>
+          <h3>Nutrition & Patient Data Intelligence</h3>
+          <p>
+            Consolidated fragmented patient records into a unified AI system
+            that generates personalized insights, reports, and follow-ups
+            automatically.
+          </p>
+          <a href="/case-nutrition-patient-intelligence.html">Read Full Case →</a>
+        </div>
+      </div>
+
+      <!-- Tall: Operational Workflow Automation -->
+      <div class="case-card tall">
+        <img src="img/case-ops.jpg" alt="Operational Workflow Automation">
+        <div class="overlay">
+          <span class="tag">Operations</span>
+          <h4>Operational Workflow Automation</h4>
+          <p>
+            Automated high-volume internal workflows across support and service
+            operations, reducing manual handoffs and execution delays.
+          </p>
+          <a href="/case-operational-workflow-automation.html">Read Full Case →</a>
+        </div>
+      </div>
+
+      <!-- Small: Manufacturing Proposal Intelligence -->
+      <div class="case-card small">
+        <img src="img/case-manufacturing.jpg" alt="Manufacturing Proposal Intelligence">
+        <div class="overlay">
+          <span class="tag">Manufacturing</span>
+          <h4>Manufacturing Proposal Intelligence</h4>
+          <p>
+            AI-driven extraction and comparison of large vendor proposals,
+            enabling faster, data-backed sourcing and planning decisions.
+          </p>
+          <a href="/case-manufacturing-proposal-intelligence.html">Read Full Case →</a>
+        </div>
+      </div>
+
+      <!-- Bottom Left: Finance Analytics-to-Action -->
+      <div class="case-card wide-left">
+        <img src="img/case-finance.jpg" alt="Finance Analytics to Action">
+        <div class="overlay">
+          <span class="tag">Finance</span>
+          <h4>Analytics-to-Action for Finance Teams</h4>
+          <p>
+            Enabled natural-language access to financial data, converting
+            questions into validated actions across planning and reporting.
+          </p>
+          <a href="/case-finance-analytics-to-action.html">Read Full Case →</a>
+        </div>
+      </div>
+
+      <!-- Bottom Right: Compliance & Risk Automation -->
+      <div class="case-card wide-right">
+        <img src="img/case-compliance.jpg" alt="Compliance & Risk Automation">
+        <div class="overlay">
+          <span class="tag">Compliance</span>
+          <h4>Compliance & Risk Automation</h4>
+          <p>
+            Automated classification and analysis of regulatory documents,
+            improving audit readiness while reducing review effort
+            significantly.
+          </p>
+          <a href="/case-compliance-risk-automation.html">Read Full Case →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- case studies end -->
 
 
 
 <!-- Blog Section -->
-    <div class="container-fluid py-5 wow fadeInUp bg-white" data-wow-delay="0.1s" id="blog">
+    <div class="container-fluid py-5 wow fadeInUp bg-black" data-wow-delay="0.1s" id="blog">
       <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-          <h5 class="fw-bold text-black text-uppercase">Latest Blog</h5>
-          <h1 class="mb-0 text-black">Read The Latest Articles from Our Blog Post</h1>
+          <h5 class="fw-bold text-white text-uppercase">Latest Blog</h5>
+          <h1 class="mb-0 text-white">Read The Latest Articles from Our Blog Post</h1>
         </div>
         <div class="row g-5" id="medium-posts">
           <!-- Blog posts will be inserted here -->
@@ -433,6 +907,9 @@
       </div>
     </div>
 <!-- Blog section end -->
+
+
+
 
 <!-- Contact Us Start -->
 <section class="contact-section text-white py-5 bg-black" id="contact">
@@ -451,7 +928,7 @@
           </div>
           <div class="d-flex align-items-center">
             <i class="fa fa-phone-alt text-primary me-3 fs-4"></i>
-            <span class="fs-5">+91 9640221097</span>
+            <span class="fs-5">+91 9110737809</span>
           </div>
         </div>
 
@@ -495,17 +972,18 @@
       <div class="col-md-2">
         <h6 class="fw-semibold text-uppercase mb-3">Explore</h6>
         <ul class="list-unstyled">
-          <li><a href="#services" class="text-white-50 text-decoration-none">Services</a></li>
-          <li><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
-          <li><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
-          <li><a href="#blog" class="text-white-50 text-decoration-none">Blog</a></li>
+          <li><a href="/" class="text-white-50 text-decoration-none">Home</a></li>
+          <li><a href="/case-studies.html" class="text-white-50 text-decoration-none">Case Studies</a></li>
+          <li><a href="/blog.html" class="text-white-50 text-decoration-none">Blog</a></li>
+          <li><a href="/about.html" class="text-white-50 text-decoration-none">About</a></li>
+          <li><a href="https://calendly.com/informategy" class="text-white-50 text-decoration-none">Contact</a></li>
         </ul>
       </div>
 
       <div class="col-md-3">
         <h6 class="fw-semibold text-uppercase mb-3">Contact</h6>
         <p class="mb-1 text-white-50"><i class="fa fa-envelope me-2"></i>vinay@informategy.com</p>
-        <p class="mb-1 text-white-50"><i class="fa fa-phone me-2 "></i>+91 9640221097</p>
+        <p class="mb-1 text-white-50"><i class="fa fa-phone me-2 "></i>+91 9110737809</p>
         <p class="mb-1 text-white-50"><i class="fa fa-globe me-2"></i>www.informategy.com</p>
       </div>
 
@@ -537,6 +1015,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
