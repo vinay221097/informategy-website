@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Customer Follow-Up Automation | Informategy</title>
+<meta name="description" content="Turn missed messages and forgotten follow-ups into an automated customer communication system with Informategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+
+<style>
+:root{--v:#6056ff;--v2:#8f88ff;--cyan:#35e0d0;--bg:#06060e;--panel:#10101d;--panel2:#151527;--line:rgba(255,255,255,.10);--muted:#9294a8;--white:#f5f6fb}
+:root{
+  --void:#06060e; --void-2:#0a0a15; --panel:#0e0e1b; --panel-2:#121223;
+  --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
+  --violet:#6056ff; --violet-soft:#8f88ff; --cyan:#35e0d0;
+  --pink:#ff6fae; --amber:#f5a83a; --green:#2fd38a; --blue:#4d8dff; --gold:#ffc94d;
+  --ink:#eef0f8; --ink-2:#c7c9db; --mute:#82849e; --mute-2:#54566f;
+  --maxw:1200px; --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#bfc1d0;font-family:Inter,sans-serif;overflow-x:hidden}a{text-decoration:none}
+h1,h2,h3,h4{font-family:"Space Grotesk",sans-serif;color:var(--white);letter-spacing:-.03em}
+.navbar-dark{background:rgba(6,6,14,.82)!important;backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09)!important}
+.navbar-dark .navbar-nav .nav-link{color:#d8d9e5!important}.navbar-dark .navbar-nav .nav-link:hover{color:#fff!important}
+.dark-page{min-height:100vh;background:
+radial-gradient(circle at 75% 10%,rgba(96,86,255,.16),transparent 32rem),
+radial-gradient(circle at 5% 55%,rgba(53,224,208,.07),transparent 28rem),var(--bg)}
+.hero{min-height:100svh;padding:155px 0 90px;position:relative;display:flex;align-items:center;overflow:hidden}
+.grid-bg{position:absolute;inset:0;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none}.o1{width:380px;height:380px;background:rgba(96,86,255,.20);right:5%;top:15%;animation:float 8s ease-in-out infinite}.o2{width:240px;height:240px;background:rgba(53,224,208,.12);left:3%;bottom:10%;animation:float 10s ease-in-out infinite reverse}
+.wrap{max-width:1180px;margin:auto;padding:0 24px;position:relative;z-index:2}
+.eyebrow{font:600 11px "JetBrains Mono";letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center}.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.01;margin:20px 0}.hero h1 span{background:linear-gradient(100deg,#fff,var(--v2),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:1.13rem;line-height:1.7;max-width:620px;color:#b9bbcb}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.cta{padding:14px 25px;border-radius:999px;background:var(--v);color:#fff;font-weight:700;box-shadow:0 14px 40px rgba(96,86,255,.35);transition:.3s}.cta:hover{transform:translateY(-3px);color:#fff;box-shadow:0 20px 55px rgba(96,86,255,.55)}.ghost{padding:14px 23px;border:1px solid var(--line);border-radius:999px;color:#fff;background:rgba(255,255,255,.04);transition:.3s}.ghost:hover{color:#fff;background:rgba(255,255,255,.09);transform:translateY(-3px)}
+.proof-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}.proof{border:1px solid var(--line);background:rgba(16,16,29,.65);border-radius:14px;padding:14px 17px;min-width:135px;backdrop-filter:blur(8px)}.proof b{display:block;color:#fff;font:700 1.35rem "Space Grotesk"}.proof small{font:500 9px "JetBrains Mono";letter-spacing:.11em;text-transform:uppercase;color:#77798d}
+.system{position:relative;min-height:500px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(20,20,37,.95),rgba(8,8,17,.9));box-shadow:0 35px 90px rgba(0,0,0,.5);overflow:hidden;padding:25px}.system:before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent,rgba(96,86,255,.16),transparent 30%);animation:spin 12s linear infinite}.system-inner{position:relative;height:100%;min-height:450px}.node{position:absolute;border:1px solid var(--line);background:rgba(15,15,27,.88);border-radius:16px;padding:15px 17px;box-shadow:0 15px 35px rgba(0,0,0,.35);backdrop-filter:blur(8px);min-width:160px}.node strong{display:block;color:#fff;font:600 .9rem "Space Grotesk"}.node span{font-size:.72rem;color:var(--muted)}.node .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);margin-right:7px;animation:pulse 1.6s infinite}.n1{top:8%;left:5%}.n2{top:8%;right:4%}.n3{top:39%;left:31%;border-color:rgba(96,86,255,.5);background:linear-gradient(145deg,rgba(96,86,255,.18),rgba(15,15,27,.94));transform:scale(1.08)}.n4{bottom:8%;left:5%}.n5{bottom:8%;right:4%}.line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,var(--v),transparent);transform-origin:left;animation:flow 2.4s infinite}.l1{width:38%;left:22%;top:21%;transform:rotate(22deg)}.l2{width:38%;right:20%;top:21%;transform:rotate(158deg)}.l3{width:38%;left:22%;bottom:20%;transform:rotate(-20deg)}.l4{width:38%;right:20%;bottom:20%;transform:rotate(200deg)}
+section{padding:105px 0;position:relative}.dark{background:#000}.section-head{max-width:700px;margin-bottom:45px}.section-head.center{margin-left:auto;margin-right:auto;text-align:center}.section-head h2{font-size:clamp(2rem,4vw,3.2rem);margin:14px 0}.section-head p{color:var(--muted);font-size:1rem}
+.pain-grid,.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{height:100%;border:1px solid var(--line);background:linear-gradient(160deg,rgba(22,22,39,.9),rgba(10,10,18,.95));border-radius:19px;padding:26px;transition:.4s;position:relative;overflow:hidden}.card:hover{transform:translateY(-7px);border-color:rgba(96,86,255,.45);box-shadow:0 25px 60px rgba(0,0,0,.35)}.card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-60px;top:-60px;background:rgba(96,86,255,.14);filter:blur(25px)}.icon{width:46px;height:46px;border-radius:12px;background:rgba(96,86,255,.13);border:1px solid rgba(96,86,255,.32);display:grid;place-items:center;color:var(--v2);font-size:19px;margin-bottom:28px}.card h3{font-size:1.1rem;margin-bottom:9px}.card p{font-size:.88rem;color:var(--muted);margin:0}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--panel)}.step{padding:30px;border-right:1px solid var(--line);position:relative}.step:last-child{border:0}.step b{font:600 10px "JetBrains Mono";color:var(--cyan);letter-spacing:.16em}.step h3{font-size:1.25rem;margin:14px 0 8px}.step p{font-size:.87rem;color:var(--muted)}.arrow{position:absolute;right:-10px;top:50%;z-index:3;width:20px;height:20px;border-radius:50%;background:var(--v);color:#fff;display:grid;place-items:center;font-size:11px}
+.results{background:linear-gradient(180deg,#000,var(--bg))}.result-grid{grid-template-columns:repeat(5,1fr)}.result .icon{margin-bottom:18px}.result h3{font-size:1rem}.result p{font-size:.8rem}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.metric{border:1px solid var(--line);border-radius:20px;padding:35px;text-align:center;background:linear-gradient(180deg,#171727,#0b0b13);position:relative;overflow:hidden}.metric:before{content:"";position:absolute;left:-30%;top:-20%;width:160%;height:80px;background:rgba(96,86,255,.28);filter:blur(30px);transform:rotate(-10deg)}.metric b{position:relative;display:block;font:800 3rem "Space Grotesk";background:linear-gradient(90deg,#fff,var(--v2));-webkit-background-clip:text;background-clip:text;color:transparent}.metric span{position:relative;color:#9b9dae;font-size:.85rem}
+.final{padding:120px 0}.final-box{border:1px solid rgba(96,86,255,.4);border-radius:28px;padding:65px 45px;text-align:center;background:radial-gradient(circle at 50% 0,rgba(96,86,255,.24),transparent 55%),#10101d;box-shadow:0 30px 100px rgba(0,0,0,.45)}.final h2{font-size:clamp(2rem,4vw,3.4rem);margin:15px auto;max-width:800px}.final p{max-width:650px;margin:0 auto;color:#aeb0c1}
+footer{background:#000!important;border-top:1px solid var(--line)}footer .text-white-50{color:#77798d!important}footer a{color:#aaa!important}footer a:hover{color:#fff!important}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.22,.61,.36,1)}.reveal.in{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}@keyframes float{50%{transform:translateY(-15px)}}@keyframes flow{0%,100%{opacity:.25}50%{opacity:1}}
+@media(max-width:991px){.hero-grid{grid-template-columns:1fr}.hero-char{order:2}.pain-grid,.result-grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.step{border-bottom:1px solid var(--line)}.metric-grid{grid-template-columns:1fr}.system{min-height:430px}}
+@media(max-width:575px){section{padding:75px 0}.hero{padding-top:125px}.hero h1{font-size:2.65rem}.pain-grid,.result-grid,.flow{grid-template-columns:1fr}.step{border-right:0}.arrow{display:none}.proof{min-width:120px}.system{min-height:400px;padding:15px}.node{min-width:125px;padding:12px}.n3{left:24%;}.final-box{padding:45px 22px}}
+
+/* NAV */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+header.nav.scrolled{background:rgba(6,6,14,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-family:"Space Grotesk";font-weight:700;font-size:19px;color:var(--ink)}
+.brand .mark{width:30px;height:30px;border-radius:8px;position:relative;flex:0 0 auto;background:conic-gradient(from 140deg,var(--violet),var(--cyan),var(--pink),var(--violet));box-shadow:0 0 18px -2px rgba(96,86,255,.8);animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.brand .mark::after{content:"";position:absolute;inset:6px;border-radius:4px;background:var(--void)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:14.5px;color:var(--ink-2);font-weight:500;position:relative;transition:color .3s}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:1.5px;width:0;background:var(--cyan);transition:width .3s var(--ease)}
+.nav-links a:not(.btn):hover{color:var(--ink)}.nav-links a:not(.btn):hover::after{width:100%}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:9px;width:42px;height:42px;color:var(--ink);cursor:pointer;font-size:18px}
+
+
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--cyan);opacity:.7}
+.eyebrow.dim{color:var(--mute)}.eyebrow.dim::before{background:var(--mute)}
+
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:"Space Grotesk";font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;cursor:pointer;border:1px solid transparent;white-space:nowrap;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s}
+.btn-primary{background:var(--violet);color:#fff;box-shadow:0 10px 30px -8px rgba(96,86,255,.7)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 44px -8px rgba(96,86,255,.95)}
+.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.btn .arw{transition:transform .3s var(--ease)}.btn:hover .arw{transform:translateX(4px)}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:60px 0 40px;position:relative;z-index:2}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
+footer h5{font-family:"Space Grotesk";color:var(--ink);font-size:1.1rem;margin-bottom:14px}
+footer .fdesc{color:var(--mute);font-size:.92rem;max-width:300px}
+footer .fh{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute-2);margin-bottom:16px}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:10px}
+footer li a{color:var(--mute);font-size:.92rem;transition:color .3s}footer li a:hover{color:var(--cyan)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:"JetBrains Mono";font-size:12px;color:var(--mute-2)}
+
+
+</style>
+</head>
+<body class="dark-page">
+
+<!-- SAME INFORMATEGY HEADER -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html"><span class="mark"></span>INFORMATEGY</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="ai-for-schools.html">AI for schools</a>
+      <a href="case-studies.html">What we've built</a>
+      
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact us</a>
+      <a href="https://calendly.com/informategyai" target="_blank" rel="noopener" class="btn btn-primary">Book a demo <span class="arw">&rarr;</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="grid-bg"></div><div class="orb o1"></div><div class="orb o2"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">AI CUSTOMER OPERATIONS</div>
+      <h1>You're paying for the leads.<br><span>Don't lose them after they contact you.</span></h1>
+      <p>Missed messages. Slow replies. Forgotten follow-ups. Customers who were interested — but never heard from you again.</p>
+      <p style="margin-top:10px">Informategy builds AI-powered follow-up systems that respond, follow up, remind, reactivate and hand conversations to your team when human action is needed.</p>
+      <div class="actions">
+        <a class="cta" href="https://calendly.com/informategyai" target="_blank">See What We Can Automate <span>→</span></a>
+        <a class="ghost" href="#how">See How It Works</a>
+      </div>
+      <div class="proof-row">
+        <div class="proof"><b>40–60%</b><small>Cost reduction</small></div>
+        <div class="proof"><b>10k+</b><small>Hours automated</small></div>
+        <div class="proof"><b>20+</b><small>AI systems deployed</small></div>
+      </div>
+    </div>
+    <div class="hero-char reveal" data-anim="scale">
+      <div class="system">
+        <div class="system-inner">
+          <div class="node n1"><strong><span class="dot"></span>New enquiry</strong><span>Website · WhatsApp · Form</span></div>
+          <div class="node n2"><strong><span class="dot"></span>Customer signal</strong><span>Intent understood</span></div>
+          <div class="node n3"><strong>AI FOLLOW-UP ENGINE</strong><span>Respond → Follow up → Remind → Reactivate</span></div>
+          <div class="node n4"><strong><span class="dot"></span>Booking</strong><span>Confirmed automatically</span></div>
+          <div class="node n5"><strong><span class="dot"></span>Human handoff</strong><span>Only when needed</span></div>
+          <i class="line l1"></i><i class="line l2"></i><i class="line l3"></i><i class="line l4"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+<div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow">THE REAL PROBLEM</div><h2>More leads won't fix a broken follow-up process.</h2><p>Before spending more on acquisition, make sure the conversations you already paid for are being handled.</p></div>
+  <div class="pain-grid">
+    <div class="card reveal"><div class="icon">◌</div><h3>Messages get missed</h3><p>Enquiries arrive while your team is busy, after hours or across different channels.</p></div>
+    <div class="card reveal"><div class="icon">↯</div><h3>Speed becomes the bottleneck</h3><p>A customer can lose interest while waiting for a reply.</p></div>
+    <div class="card reveal"><div class="icon">↻</div><h3>Follow-ups depend on memory</h3><p>Someone says “I'll call them later” — and the conversation disappears.</p></div>
+    <div class="card reveal"><div class="icon">⌁</div><h3>Past customers go quiet</h3><p>Existing customers can be forgotten even when there is a genuine reason to reconnect.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="how">
+<div class="wrap">
+  <div class="section-head reveal"><div class="eyebrow">HOW IT WORKS</div><h2>One system. Every conversation. Less chasing.</h2><p>We connect the communication channels and business systems you already use, then automate the repetitive work around them.</p></div>
+  <div class="flow reveal">
+    <div class="step"><b>01 / CAPTURE</b><h3>Catch the enquiry</h3><p>Website forms, messages, leads and other agreed sources enter one workflow.</p><span class="arrow">→</span></div>
+    <div class="step"><b>02 / UNDERSTAND</b><h3>Read the signal</h3><p>The system identifies intent, context, urgency and what should happen next.</p><span class="arrow">→</span></div>
+    <div class="step"><b>03 / FOLLOW UP</b><h3>Keep it moving</h3><p>Replies, reminders and reactivation messages happen according to your rules.</p><span class="arrow">→</span></div>
+    <div class="step"><b>04 / HAND OFF</b><h3>Bring in humans</h3><p>When a conversation needs your team, the right context is handed over.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="results">
+<div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow">THE RESULT</div><h2>Your team stops chasing every conversation.</h2><p>The goal isn't another chatbot. It's a reliable operating layer around customer communication.</p></div>
+  <div class="result-grid">
+    <div class="card result reveal"><div class="icon">⚡</div><h3>Respond faster</h3><p>Reduce the gap between enquiry and first response.</p></div>
+    <div class="card result reveal"><div class="icon">↗</div><h3>Follow up automatically</h3><p>Continue conversations when customers go quiet.</p></div>
+    <div class="card result reveal"><div class="icon">✓</div><h3>Reduce no-shows</h3><p>Automate appointment confirmations and reminders.</p></div>
+    <div class="card result reveal"><div class="icon">↻</div><h3>Reactivate customers</h3><p>Bring past customers back with relevant communication.</p></div>
+    <div class="card result reveal"><div class="icon">◎</div><h3>Keep systems updated</h3><p>Push useful information into your CRM and connected tools.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="section-head center reveal"><div class="eyebrow">BUILT FOR EXECUTION</div><h2>AI that does the work — not just the talking.</h2><p>Informategy builds operational AI systems designed around the actual workflow of your business.</p></div>
+  <div class="metric-grid">
+    <div class="metric reveal"><b>40–60%</b><span>Cost reduction target shown on our main site</span></div>
+    <div class="metric reveal"><b>10k+</b><span>Hours automated</span></div>
+    <div class="metric reveal"><b>20+</b><span>AI systems deployed</span></div>
+  </div>
+</div>
+</section>
+
+<section class="final">
+<div class="wrap">
+  <div class="final-box reveal">
+    <div class="eyebrow">FIND THE GAP</div>
+    <h2>Where are customers slipping through your process?</h2>
+    <p>We'll map the repetitive communication and follow-up work in your business and show you what can be automated first.</p>
+    <div class="actions justify-content-center">
+      <a class="cta" href="https://calendly.com/informategyai" target="_blank">Book a Consultation →</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<!-- SAME INFORMATEGY FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="brand" href="index.html" style="margin-bottom:16px"><span class="mark"></span>INFORMATEGY</a><p class="fdesc">We build AI agents and robots that help businesses scale operations, cut costs and serve better &mdash; without growing headcount.</p></div>
+      <div><div class="fh">Explore</div><ul><li><a href="index.html">Home</a></li><li><a href="ai-for-schools.html">AI for schools</a></li><li><a href="case-studies.html">Case studies</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
+      <div><div class="fh">Contact</div><ul><li><a href="mailto:vinay@informategy.com">vinay@informategy.com</a></li><li><a href="tel:+919110737809">+91 9110737809</a></li><li><a href="https://calendly.com/informategyai" target="_blank" rel="noopener">Book a demo</a></li></ul></div>
+      <div><div class="fh">Follow</div><ul><li><a href="https://www.linkedin.com/company/informategy/" target="_blank" rel="noopener">LinkedIn &#8599;</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>&copy; 2025 Informategy. All rights reserved.</span><span>SYSTEMS: <span style="color:var(--cyan)">&#9679; OPERATIONAL</span></span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
